@@ -8,7 +8,7 @@ import {
 	CustomDialogHeader,
 	Form
 } from "../../../../../common/components";
-import getBase64 from "../../../../../utils/file-convert/fileConvert";
+import { getBase64 } from "../../../../../utils";
 import styles from "./UpdateCourt.module.css";
 
 const UpdateCourt = ({ open, onClose = null, onUpdateCourt = null, oldCourt = null }) => {

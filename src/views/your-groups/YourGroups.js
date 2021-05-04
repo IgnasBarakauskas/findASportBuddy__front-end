@@ -40,28 +40,28 @@ const YourGroups = () => {
 	const [messages, setMessages] = useState("");
 
 	const fetchGroupsData = async (id) => {
-		return await getGroupsByUser(id);
+		return getGroupsByUser(id);
 	};
 	const fetchGroupsParticipants = async (id) => {
-		return await getGroupParticipants(id);
+		return getGroupParticipants(id);
 	};
 	const fetchDeleteGroup = async (id) => {
-		return await deleteGroup(id);
+		return deleteGroup(id);
 	};
 	const fetchUserData = async (id) => {
-		return await getUser(id);
+		return getUser(id);
 	};
 	const fetchLeaveGroup = async (userId, groupId) => {
-		return await leaveGroup(userId, groupId);
+		return leaveGroup(userId, groupId);
 	};
 	const fetchNewMessage = async (groupId, userId, message) => {
-		return await addMessage(groupId, userId, message);
+		return addMessage(groupId, userId, message);
 	};
 	const fetchMessages = async (groupId) => {
-		return await getMessages(groupId);
+		return getMessages(groupId);
 	};
 	const fetchDeleteMessage = async (groupId, messageId) => {
-		return await deleteMessage(groupId, messageId);
+		return deleteMessage(groupId, messageId);
 	};
 	useEffect(() => {
 		if (selectedGroup) {

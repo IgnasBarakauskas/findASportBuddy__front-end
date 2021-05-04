@@ -11,7 +11,7 @@ import {
 	CustomDialogFooter,
 	CustomDialogHeader
 } from "../../common/components";
-import getBase64 from "../../utils/file-convert/fileConvert";
+import { getBase64 } from "../../utils";
 
 const Profile = () => {
 	const [user, setUser] = useState("");

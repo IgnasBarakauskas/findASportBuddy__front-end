@@ -5,7 +5,7 @@ import { getUser } from "../../services/userServices.js";
 import { getTokenData } from "../../utils/token-utils/getToken.js";
 import styles from "./CourtsMap.module.css";
 import { CourtInformationDialog, NewCourtDialog } from "./components";
-import getBase64 from "../../utils/file-convert/fileConvert.js";
+import { getBase64 } from "../../utils";
 
 const CourtsMap = (props) => {
 	const [coordinates, setCoordinates] = useState(null);
@@ -29,8 +29,8 @@ const CourtsMap = (props) => {
 	const fetchUser = async (id) => {
 		return getUser(id);
 	};
-	const fetchUpdateCourt = async (id, court) => {
-		return updateCourt(id, court);
+	const fetchUpdateCourt = async (id, updatedCourt) => {
+		return updateCourt(id, updatedCourt);
 	};
 	const handleCloseNotification = () => {
 		setNotificationType(null);

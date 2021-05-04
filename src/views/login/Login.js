@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { CustomButton, CustomSnackbar, Form, FormContent, FormFooter, FormHeader } from "../../common/components";
 import { AddUserLocation, LoginUser } from "../../services/userServices.js";
 import { getToken } from "../../utils";
-//import { getToken } from "../../utils";
 import styles from "./Login.module.css";
 
 const useStyles = makeStyles({
@@ -63,31 +62,31 @@ const Login = () => {
 		const value = e.target.value;
 		// eslint-disable-next-line max-len
 		const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		let error = errors;
+		let newError = errors;
 		let userTemp = { ...user };
 		switch (name) {
 			case "email":
 				if (!regex.test(value)) {
-					error = { ...error, email: "Email must be a valid email" };
-					setErrors(error);
+					newError = { ...newError, email: "Email must be a valid email" };
+					setErrors(newError);
 				} else {
-					error = { ...error, email: "" };
+					newError = { ...newError, email: "" };
 					userTemp = { ...userTemp, email: value };
-					setErrors(error);
+					setErrors(newError);
 					setUser(userTemp);
 				}
 				break;
 			case "password":
 				if (value.length < 6) {
-					error = {
-						...error,
+					newError = {
+						...newError,
 						password: "Password must be 6 characters length"
 					};
-					setErrors(error);
+					setErrors(newError);
 				} else {
-					error = { ...error, password: "" };
+					newError = { ...newError, password: "" };
 					userTemp = { ...userTemp, password: value };
-					setErrors(error);
+					setErrors(newError);
 					setUser(userTemp);
 				}
 				break;

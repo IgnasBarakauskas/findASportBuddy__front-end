@@ -37,19 +37,19 @@ const Main = () => {
 	const [order, setOrder] = useState("asc");
 	const [haveEquipment, setHaveEquipment] = useState(true);
 	const fetchGroupsData = async () => {
-		return await getGroups();
+		return getGroups();
 	};
 	const fetchDeleteGroup = async (id) => {
-		return await deleteGroup(id);
+		return deleteGroup(id);
 	};
 	const fetchUserData = async (id) => {
-		return await getUser(id);
+		return getUser(id);
 	};
 	const fetchJoinGroup = async (userId, groupId, equipment = { equipment: true }) => {
-		return await joinGroup(userId, groupId, equipment);
+		return joinGroup(userId, groupId, equipment);
 	};
 	const fetchLeaveGroup = async (userId, groupId) => {
-		return await leaveGroup(userId, groupId);
+		return leaveGroup(userId, groupId);
 	};
 	useEffect(() => {
 		if (!doingApiCall) {
