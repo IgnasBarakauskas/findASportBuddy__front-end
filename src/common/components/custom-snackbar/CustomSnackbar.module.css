@@ -1,0 +1,17 @@
+.snackbar{
+	margin-top: 50px;
+	background-color:var(--color-darkgreen) !important;
+	border-radius: 20px;
+	padding: 10px;
+	border: 2px solid var(--color-white);
+}
+.snackbarContent{
+	color: var(--color-white);
+	font-weight: bold;
+}
+.snackbar[data-color="success"]{
+	background-color:var(--color-darkgreen) !important;
+}
+.snackbar[data-color="danger"]{
+	background-color:var(--color-red) !important;
+}

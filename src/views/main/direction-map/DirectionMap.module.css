@@ -1,0 +1,17 @@
+.startMarker {
+	background-image: url("../../../common/images/start.png");
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+  }
+  .endMarker {
+	background-image: url("../../../common/images/end2.png");
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+  }
+  .map{
+	  height:70vh;
+	  width: 80vw;
+	  border: 0px;
+  }

@@ -1,0 +1,9 @@
+.headerCell{
+	background-color: var(--color-darkgreen) !important;
+	color: var(--color-white) !important;
+	font-weight: 700 !important;
+	font-size: 14px !important;
+}
+.regularCell{
+
+}

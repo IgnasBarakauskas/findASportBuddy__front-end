@@ -1,0 +1,21 @@
+.errorMessage {
+	color: var(--color-red);
+	display: inline-block;
+	padding-bottom: 15px;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+  }
+  input[type="number"]::-webkit-outside-spin-button {
+	display: none;
+  }
+.formField{
+	padding-bottom: 20px;
+}
+.formBox{
+	max-width: 200px;
+	margin:auto;
+}
+.dialog__content{
+	width: 400px !important;
+}

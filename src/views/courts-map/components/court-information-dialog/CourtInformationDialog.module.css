@@ -1,0 +1,59 @@
+.courtType{
+	text-transform: capitalize;
+	font-weight: bold;
+}
+.courtHelperText{
+	display: inline-block;
+	width:160px
+}
+.courtInformation__block{
+
+	display: inline-block;
+	max-width: 200px !important;
+	height: 130px;
+}
+.editIcon{
+	margin-right: 15px;
+}
+.headerIcons{
+	position: absolute;
+	right: 16px
+}
+.noGroup{
+	font-weight: bold;
+	font-size: 16px;
+}
+.addGroup{
+	padding-top: 20px;
+}
+.addGroupButton{
+	padding: 0px !important;
+}
+@media only screen and (min-width: 600px) {
+	.courtImage {
+		display: inline-block;
+		position: absolute;
+		height: 115px;
+		right: 6.6vw;
+	}
+	.courtImage:hover {
+		display: inline-block;
+		position: absolute;
+		height: 500px;
+		right: 6.6vw;
+		z-index: 10;
+	}
+	.courtInformation__block{
+		padding-left: 5vw;
+	}
+  }
+@media only screen and (max-width: 600px) {
+	.courtImage {
+		display: inline-block;
+		height: 115px;
+		padding-left: 8vw;
+	}
+	.courtInformation__block{
+		padding-left: 8vw;
+	}
+  }

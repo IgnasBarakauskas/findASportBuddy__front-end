@@ -1,0 +1,5 @@
+.errorMessage {
+	color: var(--color-red);
+	display: inline-block;
+	padding-bottom: 15px;
+}

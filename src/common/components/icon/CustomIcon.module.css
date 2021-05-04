@@ -1,0 +1,4 @@
+.bordered{
+	stroke: var(--color-black);
+  stroke-width: 30px;
+}

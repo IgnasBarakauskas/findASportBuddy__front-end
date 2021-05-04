@@ -1,0 +1,30 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": ["react-app", "prettier"],
+	"parserOptions": {
+		"ecmaVersion": 12
+	},
+	"plugins": ["react", "prettier"],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"printWidth": 120,
+				"semi": true,
+				"trailingComma": "none",
+				"singleQuote": false,
+				"useTabs": true,
+				"endOfLine": "auto",
+				"arrowParens": "always",
+				"tabWidth":4
+			}
+		],
+		"max-len": [
+			"warn",
+			{ "code": 120, "tabWidth": 4, "ignoreUrls": true, "ignoreTemplateLiterals": true, "ignoreStrings": true }
+		]
+	}
+}

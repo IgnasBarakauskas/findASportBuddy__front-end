@@ -1,13 +1,30 @@
+:root {
+	--color-darkgreen: #006c1d;
+	--color-lightgreen: #9bed56;
+	--color-black: #191919;
+	--color-lightgrey: #eafdef;
+	--color-white: #f9ebe0;
+	--color-blue: #3241cc;
+	--color-red: #a72608;
+	--color-white-transparent: #f9ebe052;
+	--color-transparent: #00000000;
+	--color-white-slightlytransparent: #f9ebe0ee;
+	--color-darkgreen-slightlytransparent: #006c1de8;
+	--color-grey: #afa3a3;
+	--color-darkgrey: #615a5a;
+
+	--font-size-md: 20px;
+
+	--font-bold: 600;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

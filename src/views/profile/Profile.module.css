@@ -1,0 +1,91 @@
+.mainContainer{
+	width: 80vw;
+	min-width: 340px;
+	margin: 10vh auto;
+	padding: 20px; 
+	overflow-y: scroll;
+	max-height: 65vh;
+	background-color: var(--color-white-slightlytransparent);
+}
+.mainContainer::-webkit-scrollbar {
+    display: none;
+}
+.profile{
+	width: 90%;
+	display: flex;
+	align-items: center;
+}
+.profileImageContainer{
+	display: inline-block;
+	width:50%;
+}
+.profileImageContainer__image{
+	width: 70%;
+}
+.profileInfo{
+	display: inline-block;
+	width: 50%;
+}
+.profileInfo__info{
+	font-size: 20px;
+}
+.profileInfo__title{
+	display: inline-block;
+	width: 120px;
+	padding: 10px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+.infoFields{
+	padding-top: 50px;
+	display: inline-block;
+	margin-right: 15%;
+	width: 20%;
+	height: 310px;
+	min-width: 225px;
+}
+.infoFields__last{
+	padding-top: 50px;
+	display: inline-block;
+	width:25%;
+	height: 310px;
+	min-width: 225px;
+}
+.input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+  }
+.input[type="number"]::-webkit-outside-spin-button {
+	display: none;
+  }
+.inputBlock{
+	padding: 10px;
+}
+.input__title{
+	font-weight: bold;
+}
+.buttons{
+	display: flex;
+	padding: 0 9vw;
+	justify-content: flex-end;
+}
+.deleteButton{
+	margin-right: 10px !important;
+}
+.errorMessage {
+	display: inline-block;
+	color: var(--color-red);
+}
+.infoMessage {
+	display: inline-block;
+	color: var(--color-darkgreen);
+}
+.infoMessageLoading {
+	color: var(--color-darkgreen);
+}
+.confirmDialog{
+	display: inline-block;
+	font-weight: bold;
+	height: 56px;
+	width: 260px;
+	line-height: 56px;
+}

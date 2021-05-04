@@ -1,0 +1,10 @@
+.backGround {
+	background: linear-gradient(var(--color-white-transparent), var(--color-white-transparent)),
+		url("./common/images/Background.jpg");
+	min-height: calc(100vh - 64px);
+	max-width: 100%;
+	overflow-y: hidden !important;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+}

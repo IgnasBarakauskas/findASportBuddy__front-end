@@ -1,0 +1,19 @@
+.input{
+	width: 100%;
+	padding: 10px 0 !important;
+}
+.input__text{
+	margin-bottom: -5px;
+	padding-top: 5px;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+  }
+.errorMessage {
+	color: var(--color-red);
+	display: inline-block;
+	padding-bottom: 15px;
+}
+.dialog__content{
+	width: 400px !important;
+}

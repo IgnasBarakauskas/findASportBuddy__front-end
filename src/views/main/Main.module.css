@@ -1,0 +1,50 @@
+.mainContainer{
+	width: 50vw;
+	min-width: 340px;
+	margin: 10vh auto;
+	overflow-y: scroll;
+	max-height: 70vh;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.filtersBlock{
+	padding: 5px 0 0 0;
+	background-color: var(--color-white);
+	min-height:60px;
+	border-radius: 0 0 5px 5px;
+	border-bottom: 1px solid var(--color-grey);
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+}
+.filters__hasEquipment{
+	padding-left: 10px;
+	font-size: 16px;
+	font-weight: 600;
+	display:inline-block;
+	height: 48px !important;
+	line-height: 55px;
+}
+.filters__distance{
+	margin-left: 10px;
+}
+.mainContainer::-webkit-scrollbar {
+    display: none;
+}
+.mapContainer{
+	background-color: var(--color-darkgreen);
+	position: relative;
+	width: 80vw;
+	height: 70vh;
+	padding: 0 !important;
+}
+.filters__sport{
+	margin: 0 10px !important;
+}
+.filter__selectors__120{
+	width: 120px !important
+}
+.filter__selectors{
+	width: 110px !important
+}

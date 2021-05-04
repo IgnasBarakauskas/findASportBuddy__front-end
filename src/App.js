@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { CourtsMap, Login, Register, Main, Profile } from "./views";
+import React, { useState, useEffect } from "react";
+import { Redirect, Switch, Route } from "react-router";
+import { NavBar } from "./common/components";
+import styles from "./App.module.css";
+import { getTokenData } from "./utils";
+import YourGroups from "./views/your-groups/YourGroups";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const [user, setUser] = useState(null);
+	useEffect(() => {
+		setUser(getTokenData());
+	}, []);
+	return (
+		<>
+			<NavBar />
+			<div className={styles.backGround}>
+				<Switch>
+					{user === "token expired" && <Route exact path={"/login"} component={Login} />}
+					{user === "token expired" && <Route exact path="/register" component={Register} />}
+					{user?._id && <Route path="/courts-map" component={CourtsMap} />}
+					{user?._id && <Route path="/your-groups" component={YourGroups} />}
+					{user?._id && <Route path="/profile" component={Profile} />}
+					{user?.role && <Route exact path="/" component={Main} />}
+					{user === "token expired" && <Redirect exact to="/login" />}
+				</Switch>
+			</div>
+		</>
+	);
+};
 
 export default App;

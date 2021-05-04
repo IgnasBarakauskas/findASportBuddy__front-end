@@ -1,0 +1,20 @@
+.input{
+	width: 100%;
+	padding: 10px !important;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+  }
+.input__text{
+	padding-left: 10px;
+	margin-bottom: -5px;
+	padding-top: 5px;
+}
+.errorMessage {
+	color: var(--color-red);
+	display: inline-block;
+	padding-bottom: 15px;
+}
+.dialog__content{
+	width: 400px !important;
+}

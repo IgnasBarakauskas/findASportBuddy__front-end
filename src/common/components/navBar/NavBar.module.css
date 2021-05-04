@@ -1,0 +1,54 @@
+.navBar {
+	position:sticky;
+	top:0;
+	background-color: var(--color-darkgreen) !important;
+	height: 64px;
+}
+.secondaryMenu{
+	position:absolute;
+	right:16px;
+}
+.navBar__button {
+	color: var(--color-white);
+	padding-right: 20px;
+	text-decoration: none;
+	font-size: var(--font-size-md);
+	font-weight: var(--font-bold);
+}
+.navBar__button:hover {
+	color: var(--color-black);
+}
+.icon{
+	margin-right: 30px;
+}
+.mainRoutes {
+	height: 64px;
+	line-height: 64px;
+}
+.profile{
+	margin-right: 20px;
+}
+.profile__letter{
+	display: inline-block;
+	text-transform: capitalize;
+	color: var(--color-darkgreen);
+	font-size: var(--font-size-md);
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background-color: var(--color-white);
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+}
+.profile__image{
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	
+}
+.logout--ifprofilePhoto{
+	position: relative;
+	bottom: 10px;
+}

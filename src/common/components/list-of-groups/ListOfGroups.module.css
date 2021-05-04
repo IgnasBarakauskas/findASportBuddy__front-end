@@ -1,0 +1,45 @@
+.groupBlock{
+	display: flex;
+	margin-top: 10px;
+	border-radius: 20px;
+	background-color: var(--color-white-slightlytransparent);
+	width: 50vw;
+	min-width: 340px;
+}
+.empty{
+	padding: 100px 0px;
+	justify-content: center;
+}
+.loader{
+	color: var(--color-darkgreen);
+}
+.groupBlock__firstColumn{
+	width: 70%;
+	border: 0px !important;
+}
+.groupBlock__secondColumn{
+	min-width: 140px;
+	border: 0px !important;
+}
+.groupBlock__type{
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.timeBlock__date{
+	font-size: 18px;
+	font-weight: 600;
+}
+.timeBlock__time{
+	font-size: 15px;
+	padding-left: 5px;
+}
+.groupBlock__distance{
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.groupBlock__equipment{
+	font-size: 16px;
+	font-weight: 600;
+}

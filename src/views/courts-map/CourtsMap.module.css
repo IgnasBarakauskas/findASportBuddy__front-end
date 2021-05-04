@@ -1,0 +1,13 @@
+.input{
+	padding: 10px !important;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+  }
+  input[type="number"]::-webkit-outside-spin-button {
+	display: none;
+  }
+  .mapBox{
+	padding-top: 10vh;
+	margin: auto;
+  }

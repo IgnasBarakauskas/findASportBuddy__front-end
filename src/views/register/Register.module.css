@@ -1,0 +1,10 @@
+.form {
+	margin: auto;
+	width: 40vw;
+	min-width: 300px;
+}
+.errorMessage {
+	color: var(--color-red);
+	display: inline-block;
+	padding-bottom: 15px;
+}
