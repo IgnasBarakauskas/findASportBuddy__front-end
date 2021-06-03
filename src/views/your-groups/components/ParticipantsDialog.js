@@ -47,6 +47,7 @@ const ParticipantsDialog = ({
 							</CustomTableRow>
 						</CustomTableHead>
 						<CustomTableBody>
+							{console.log(data)}
 							{Array.isArray(data) &&
 								selectedGroup &&
 								data.map((participant) => (

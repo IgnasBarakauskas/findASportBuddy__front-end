@@ -57,3 +57,6 @@
 		padding-left: 8vw;
 	}
   }
+  .cancelButton{
+	color: grey !important;
+}

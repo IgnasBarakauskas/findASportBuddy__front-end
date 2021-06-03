@@ -263,7 +263,9 @@ const Main = () => {
 						Cancel
 					</CustomButton>
 					<CustomButton
-						disabled={groupToJoin?.maxParticipants > groupToJoin?.participants.length && !userHasEquipment}
+						disabled={
+							groupToJoin?.maxParticipants === groupToJoin?.participants.length + 1 && !userHasEquipment
+						}
 						onClick={handleJoindGroupWithoutEquipmnet}
 						color="green"
 					>

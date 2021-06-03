@@ -1,7 +1,8 @@
 import { CircularProgress, Tooltip } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { convertTime, distance } from "../../../utils";
-import { CustomIconButton } from "../buttons";
+import { CustomButton, CustomIconButton } from "../buttons";
+import { CustomDialog, CustomDialogFooter, CustomDialogHeader } from "../dialog";
 import { CustomIcon, icon } from "../icon";
 import { CustomTable, CustomTableBody, CustomTableCell, CustomTableRow } from "../table";
 import styles from "./ListOfGroups.module.css";
@@ -16,6 +17,8 @@ const ListOfGroups = ({
 	onOpenInfo,
 	infoButton = false
 }) => {
+	const [deleteGroup, setDeleteGroup] = useState(null);
+	const [isDeleteInitialized, setIsDeleteInitialized] = useState(false);
 	const CourtIcon = (type) => {
 		switch (type) {
 			case "me":
@@ -137,7 +140,8 @@ const ListOfGroups = ({
 														<CustomIconButton
 															icon={icon.faTrash}
 															onClick={() => {
-																onDeleteGroup(group._id);
+																setDeleteGroup(group._id);
+																setIsDeleteInitialized(true);
 															}}
 															color="var(--color-red)"
 														/>
@@ -164,6 +168,23 @@ const ListOfGroups = ({
 						</CustomTable>
 					</div>
 				))}
+			<CustomDialog open={isDeleteInitialized} onClose={() => setIsDeleteInitialized(false)}>
+				<CustomDialogHeader> Are you sure you want to delete this group?</CustomDialogHeader>
+				<CustomDialogFooter>
+					<CustomButton className={styles.cancelButton} onClick={() => setIsDeleteInitialized(false)}>
+						Cancel
+					</CustomButton>
+					<CustomButton
+						color="red"
+						onClick={() => {
+							setIsDeleteInitialized(false);
+							onDeleteGroup(deleteGroup);
+						}}
+					>
+						Delete
+					</CustomButton>
+				</CustomDialogFooter>
+			</CustomDialog>
 			{(!Array.isArray(data) || !data.length) && !loading && (
 				<div className={`${styles.groupBlock} ${styles.empty}`}>
 					<h3>There is no groups to show by given filters</h3>

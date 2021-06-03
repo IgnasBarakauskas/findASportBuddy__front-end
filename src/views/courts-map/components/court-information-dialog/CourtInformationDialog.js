@@ -33,6 +33,7 @@ export default function CourtInformationDialog({
 }) {
 	const [open, setOpen] = useState(false);
 	const [groups, setGroups] = useState(null);
+	const [isDeleteInitialized, setIsDeleteInitialized] = useState(false);
 	const [court, setCourt] = useState(null);
 	const fetchCourtData = async (id) => {
 		return getCourt(id);
@@ -91,7 +92,7 @@ export default function CourtInformationDialog({
 								/>
 								<CustomIconButton
 									onClick={() => {
-										onDelete(court._id);
+										setIsDeleteInitialized(true);
 									}}
 									color={"var(--color-red)"}
 									icon={icon.faTrash}
@@ -176,6 +177,23 @@ export default function CourtInformationDialog({
 					onClose={onCloseUpdateWindow}
 					oldCourt={court}
 				/>
+				<CustomDialog open={isDeleteInitialized} onClose={() => setIsDeleteInitialized(false)}>
+					<CustomDialogHeader> Are you sure you want to delete this court?</CustomDialogHeader>
+					<CustomDialogFooter>
+						<CustomButton className={styles.cancelButton} onClick={() => setIsDeleteInitialized(false)}>
+							Cancel
+						</CustomButton>
+						<CustomButton
+							color="red"
+							onClick={() => {
+								setIsDeleteInitialized(false);
+								onDelete(court._id);
+							}}
+						>
+							Delete
+						</CustomButton>
+					</CustomDialogFooter>
+				</CustomDialog>
 			</>
 		)
 	);
